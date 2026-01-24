@@ -1,4 +1,23 @@
-const sumAll = function() {
+const sumAll = function(num1, num2) {
+    // Exclude non positive, integer numbers
+    if (
+        typeof num1 !== "number"
+        || typeof num2 !== "number"
+        || num1 < 0
+        || num2 < 0
+        || !Number.isInteger(num1)
+        || !Number.isInteger(num2)
+    ) return 'ERROR';
+
+    let startingValue = num1 < num2 ? num1 : num2;
+    let endValue = num1 < num2 ? num2 : num1;
+    let total = 0;
+
+    for (let i = startingValue; i <= endValue; i++) {
+        total += i;
+    }
+
+    return total
 
 };
 
