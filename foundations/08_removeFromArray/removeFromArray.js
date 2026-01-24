@@ -10,6 +10,8 @@
 // without modifying the original array
 
 const removeFromArray = function(arr, ...rest) {
+    // new array returned, with only items that
+    // are not arguments
     return arr.filter((item) => !rest.includes(item))
 };
 
